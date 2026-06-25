@@ -4,13 +4,17 @@ import {
   STATION_COMMON,
   STATION_OFFICIAL,
 } from '../data/connection';
+import { useFadeIn } from '../hooks/useFadeIn';
 import { CopyButton } from './CopyButton';
 import styles from './ConnectSection.module.css';
 import copyStyles from './CopyButton.module.css';
 
 export function ConnectSection() {
+  const ref = useFadeIn<HTMLElement>();
+
   return (
     <section
+      ref={ref}
       id="connect"
       className={styles.section}
       aria-labelledby="connect-heading"
@@ -24,7 +28,7 @@ export function ConnectSection() {
             {STATION_COMMON} · {STATION_OFFICIAL}
           </p>
           <p className={styles.address} aria-label="Server address">
-            {SERVER_ADDRESS}
+            <span className={styles.addressPrefix}>byond://</span>{SERVER_ADDRESS}
           </p>
           <div className={styles.actions}>
             <a

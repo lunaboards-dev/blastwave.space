@@ -24,7 +24,6 @@
   background: var(--panel);
   border: 1px solid rgba(0, 229, 255, 0.25);
   color: var(--text-primary);
-  max-width: 72ch;
 }
 
 .accordion {
@@ -36,6 +35,12 @@
 .item {
   background: var(--panel);
   border: 1px solid rgba(168, 173, 191, 0.2);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item:hover {
+  border-color: rgba(0, 229, 255, 0.35);
+  box-shadow: 0 0 16px rgba(0, 229, 255, 0.06);
 }
 
 .trigger {

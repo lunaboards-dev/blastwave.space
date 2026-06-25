@@ -1,9 +1,13 @@
 import { OFFERS } from '../data/offers';
+import { useFadeIn } from '../hooks/useFadeIn';
 import styles from './OffersSection.module.css';
 
 export function OffersSection() {
+  const ref = useFadeIn<HTMLElement>();
+
   return (
     <section
+      ref={ref}
       id="about"
       className={styles.section}
       aria-labelledby="about-heading"

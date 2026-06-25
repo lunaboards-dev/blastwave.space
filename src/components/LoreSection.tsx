@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { LORE_INTRO, LORE_SECTIONS } from '../data/lore';
+import { useFadeIn } from '../hooks/useFadeIn';
 import styles from './LoreSection.module.css';
 
 export function LoreSection() {
   const [openId, setOpenId] = useState<string>(LORE_SECTIONS[0]?.id ?? '');
+  const ref = useFadeIn<HTMLElement>();
 
   return (
     <section
+      ref={ref}
       id="lore"
       className={styles.section}
       aria-labelledby="lore-heading"

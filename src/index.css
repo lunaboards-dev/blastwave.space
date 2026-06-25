@@ -86,3 +86,34 @@ a:hover {
   white-space: nowrap;
   border: 0;
 }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.fade-enter.visible {
+  animation: fadeUp 0.5s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-enter {
+    opacity: 1;
+    transform: none;
+  }
+
+  .fade-enter.visible {
+    animation: none;
+  }
+}
