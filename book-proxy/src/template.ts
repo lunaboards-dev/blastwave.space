@@ -20,9 +20,33 @@ const FONT_LINK =
   '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' +
   '<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">';
 
+function normalizeHeadingText(value: string): string {
+  return value
+    .replace(/<a\b[^>]*class="[^"]*toc-anchor[^"]*"[^>]*>[\s\S]*?<\/a>/gi, '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/¶/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+}
+
+/** Wiki.js pages often lead with an h1 matching the page title; the book shell already renders one. */
+export function stripDuplicateTitleHeading(html: string, title: string): string {
+  const match = html.match(/^\s*<h1\b[^>]*>([\s\S]*?)<\/h1>/i);
+  if (!match) {
+    return html;
+  }
+
+  if (normalizeHeadingText(match[1]) !== normalizeHeadingText(title)) {
+    return html;
+  }
+
+  return html.slice(match[0].length);
+}
+
 export function renderBookPage(title: string, content: string, tags: string[] = []): string {
   const safeTitle = escapeHtml(title);
-  const transformed = convertCollapsibleBlocks(content);
+  const transformed = stripDuplicateTitleHeading(convertCollapsibleBlocks(content), title);
   const reason = extractMaintenanceReason(transformed);
   const banners = renderMaintenanceBannersHtml(tags, reason);
 

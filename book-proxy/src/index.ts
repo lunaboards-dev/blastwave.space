@@ -47,8 +47,15 @@ async function main(): Promise<void> {
 
   app.get('/health', async () => ({ ok: true }));
 
-  app.get('/:slug', async (request, reply) => {
-    const { slug } = request.params as { slug: string };
+  app.get('/*', async (request, reply) => {
+    const slug = decodeURIComponent((request.params as { '*': string })['*'] ?? '');
+    if (!slug) {
+      return reply
+        .code(404)
+        .type('text/html; charset=utf-8')
+        .send(renderNotFound(slug));
+    }
+
     const assetFilename = sanitizeAssetFilename(slug);
     if (assetFilename) {
       try {

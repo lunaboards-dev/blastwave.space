@@ -65,6 +65,14 @@ body,
   border-color: rgba(0, 229, 255, 0.14) !important;
 }
 
+.v-application .grey.lighten-1,
+.v-application .grey.lighten-1.theme--light {
+  color: var(--text-muted) !important;
+  background-color: rgba(168, 173, 191, 0.14) !important;
+  background: rgba(168, 173, 191, 0.14) !important;
+  border-color: rgba(168, 173, 191, 0.24) !important;
+}
+
 .v-application .v-card__actions.grey.lighten-4,
 .v-application .v-card__actions.grey.darken-4-l5 {
   color: var(--text-muted) !important;
@@ -684,16 +692,74 @@ select,
   caret-color: var(--neon-cyan) !important;
 }
 
+/* Beat Vuetify .theme--light.v-treeview (black text in folder picker / move dialog) */
+.v-application .theme--light.v-treeview,
+.theme--light.v-treeview {
+  color: var(--text-primary) !important;
+}
+
+.v-application .theme--light.v-treeview .v-treeview-node,
+.v-application .theme--light.v-treeview .v-treeview-node__root,
+.v-application .theme--light.v-treeview .v-treeview-node__content,
+.v-application .theme--light.v-treeview .v-treeview-node__label,
+.theme--light.v-treeview .v-treeview-node,
+.theme--light.v-treeview .v-treeview-node__root,
+.theme--light.v-treeview .v-treeview-node__content,
+.theme--light.v-treeview .v-treeview-node__label {
+  color: var(--text-primary) !important;
+}
+
+.v-application .theme--light.v-treeview .v-treeview-node--active,
+.v-application .theme--light.v-treeview .v-treeview-node--active .v-treeview-node__label,
+.v-application .theme--light.v-treeview .v-treeview-node:hover .v-treeview-node__label,
+.theme--light.v-treeview .v-treeview-node--active,
+.theme--light.v-treeview .v-treeview-node--active .v-treeview-node__label,
+.theme--light.v-treeview .v-treeview-node:hover .v-treeview-node__label {
+  color: var(--neon-cyan) !important;
+}
+
+.v-application .theme--light.v-treeview .v-icon,
+.theme--light.v-treeview .v-icon {
+  color: var(--text-muted) !important;
+}
+
 .search,
 .search-input,
 .search-results,
 .v-autocomplete,
 .v-menu__content,
 .v-dialog,
-.v-dialog .v-card {
+.v-dialog .v-card,
+.v-application .v-dialog .theme--light.v-card,
+.v-application .v-dialog .theme--light.v-sheet,
+.v-dialog .theme--light.v-card,
+.v-dialog .theme--light.v-sheet,
+.v-dialog .v-card__text,
+.v-application .v-dialog .theme--light.v-card .v-card__text,
+.v-dialog .v-card__actions,
+.v-dialog .v-window,
+.v-dialog .v-window.theme--light,
+.v-dialog .v-tabs-items,
+.v-dialog .v-tabs-items.theme--light,
+.v-dialog .v-window-item,
+.v-dialog .v-window-item--active,
+.v-dialog .v-window-item > div {
   color: var(--text-primary) !important;
   background: var(--panel-solid) !important;
+  background-color: var(--panel-solid) !important;
+  border-color: rgba(0, 229, 255, 0.18) !important;
+}
+
+.v-dialog .v-card,
+.v-dialog .theme--light.v-card,
+.v-dialog .theme--light.v-sheet {
   border: 1px solid rgba(0, 229, 255, 0.18) !important;
+}
+
+.v-dialog .v-card__text,
+.v-dialog .v-window-item > div {
+  border: 0 !important;
+  box-shadow: none !important;
 }
 
 .search-results-items .highlighted {
@@ -708,7 +774,108 @@ select,
 
 .v-menu__content,
 .v-dialog {
+  border: 1px solid rgba(0, 229, 255, 0.18) !important;
   box-shadow: 0 0 32px rgba(0, 229, 255, 0.12) !important;
+}
+
+/* Modal underlay — Wiki.js uses .v-overlay__scrim.blue.darken-4 (#0d47a1) */
+.v-overlay__scrim,
+.v-application .v-overlay__scrim,
+.v-application .v-overlay__scrim.blue.darken-4,
+.v-application .blue.darken-4.v-overlay__scrim {
+  background-color: rgba(7, 8, 15, 0.76) !important;
+  background-image: none !important;
+  border-color: transparent !important;
+}
+
+/* Wiki.js modal headers — beat default Material blue gradient */
+.dialog-header {
+  color: var(--neon-cyan) !important;
+  background-color: var(--panel-solid) !important;
+  background-image:
+    radial-gradient(circle at 18% 0%, rgba(0, 229, 255, 0.16), transparent 14rem),
+    linear-gradient(180deg, rgba(10, 12, 22, 0.98), var(--panel-solid)) !important;
+  border-bottom: 1px solid rgba(0, 229, 255, 0.22) !important;
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.08) !important;
+}
+
+.dialog-header.is-red {
+  color: var(--neon-magenta) !important;
+  background-color: var(--panel-solid) !important;
+  background-image:
+    radial-gradient(circle at 18% 0%, rgba(255, 45, 168, 0.16), transparent 14rem),
+    linear-gradient(180deg, rgba(10, 12, 22, 0.98), var(--panel-solid)) !important;
+  border-bottom-color: rgba(255, 45, 168, 0.28) !important;
+  box-shadow: 0 0 18px rgba(255, 45, 168, 0.1) !important;
+}
+
+.dialog-header.is-orange {
+  color: var(--neon-amber) !important;
+  background-color: var(--panel-solid) !important;
+  background-image:
+    radial-gradient(circle at 18% 0%, rgba(255, 176, 32, 0.14), transparent 14rem),
+    linear-gradient(180deg, rgba(10, 12, 22, 0.98), var(--panel-solid)) !important;
+  border-bottom-color: rgba(255, 176, 32, 0.28) !important;
+  box-shadow: 0 0 18px rgba(255, 176, 32, 0.1) !important;
+}
+
+.dialog-header.is-teal,
+.dialog-header.is-indigo {
+  color: var(--neon-cyan) !important;
+  background-color: var(--panel-solid) !important;
+  background-image:
+    radial-gradient(circle at 18% 0%, rgba(0, 229, 255, 0.16), transparent 14rem),
+    linear-gradient(180deg, rgba(10, 12, 22, 0.98), var(--panel-solid)) !important;
+  border-bottom-color: rgba(0, 229, 255, 0.22) !important;
+}
+
+.dialog-header.is-dark {
+  color: var(--text-primary) !important;
+  background-color: var(--panel-solid) !important;
+  background-image: linear-gradient(180deg, rgba(10, 12, 22, 0.98), var(--bg-deep)) !important;
+  border-bottom-color: rgba(168, 173, 191, 0.22) !important;
+  box-shadow: none !important;
+}
+
+/* Beat Vuetify .v-application .blue.darken-* on admin dialogs / toolbars */
+.v-application .blue.darken-1,
+.v-application .blue.darken-1.theme--light,
+.v-application .blue.darken-2,
+.v-application .blue.darken-2.theme--light,
+.v-application .v-toolbar.blue.darken-1,
+.v-application .v-toolbar.blue.darken-2,
+.v-application .v-card__actions.blue.darken-1,
+.v-application .v-card__actions.blue.darken-2 {
+  color: var(--text-primary) !important;
+  background-color: var(--panel-solid) !important;
+  background: var(--panel-solid) !important;
+  border-color: rgba(0, 229, 255, 0.22) !important;
+}
+
+.v-application .blue.darken-1 .v-btn,
+.v-application .blue.darken-1 .v-icon,
+.v-application .blue.darken-2 .v-btn,
+.v-application .blue.darken-2 .v-icon,
+.v-application .v-toolbar.blue.darken-1 .v-btn,
+.v-application .v-toolbar.blue.darken-1 .v-icon,
+.v-application .v-toolbar.blue.darken-2 .v-btn,
+.v-application .v-toolbar.blue.darken-2 .v-icon {
+  color: var(--text-muted) !important;
+}
+
+.v-application .blue.darken-1 .v-btn:hover,
+.v-application .blue.darken-1 .v-btn:hover .v-icon,
+.v-application .blue.darken-2 .v-btn:hover,
+.v-application .blue.darken-2 .v-btn:hover .v-icon,
+.v-application .v-toolbar.blue.darken-1 .v-btn:hover,
+.v-application .v-toolbar.blue.darken-1 .v-btn:hover .v-icon,
+.v-application .v-toolbar.blue.darken-2 .v-btn:hover,
+.v-application .v-toolbar.blue.darken-2 .v-btn:hover .v-icon {
+  color: var(--neon-cyan) !important;
 }
 
 /* Header dropdowns (account, page actions, locale) — Wiki.js uses theme--light + grey lighten-5 */
