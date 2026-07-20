@@ -1,4 +1,4 @@
-import { RULES, STAFF_ROLES } from '../data/rules';
+import { RULES, SILICON_RULES, STAFF_ROLES } from '../data/rules';
 import styles from './RulesPage.module.css';
 
 const STAFF_LEVEL_CLASS = [
@@ -33,6 +33,11 @@ export function RulesPage() {
                 </a>
               </li>
             ))}
+            <li>
+              <a className={styles.tocLink} href="#silicon-rules">
+                Silicon Rules
+              </a>
+            </li>
             <li>
               <a className={styles.tocLink} href="#staff-structure">
                 Staff Structure
@@ -69,6 +74,15 @@ export function RulesPage() {
             </li>
           ))}
         </ol>
+
+        <section id="silicon-rules" className={styles.ruleSection}>
+          <h2 className={styles.ruleHeading}>Silicon Rules</h2>
+          <ul className={styles.ruleList}>
+            {SILICON_RULES.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
 
         <section id="staff-structure" className={styles.staffSection}>
           <h2 className={styles.staffHeading}>Staff Structure</h2>

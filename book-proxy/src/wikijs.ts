@@ -61,12 +61,17 @@ export class WikiClient {
     }
 
     const payload = (await response.json()) as GraphqlResponse;
+    const page = payload.data?.pages?.singleByPath;
 
     if (payload.errors?.length) {
+      // Wiki.js raises GraphQL errors for missing pages; treat as a miss so
+      // callers can try the next slug candidate (e.g. Guide_to_x → guide-to-x).
+      if (!page && payload.errors.every((error) => isPageMissError(error.message))) {
+        return null;
+      }
       throw new Error(payload.errors.map((e) => e.message).join('; '));
     }
 
-    const page = payload.data?.pages?.singleByPath;
     if (!page) return null;
 
     return {
@@ -77,3 +82,12 @@ export class WikiClient {
     };
   }
 }
+
+function isPageMissError(message: string): boolean {
+  const normalized = message.toLowerCase();
+  return (
+    normalized.includes('this page does not exist') ||
+    normalized.includes('pagenotfound')
+  );
+}
+

@@ -14,7 +14,7 @@ Usage:
 Commands:
   import markdown [--source=<preset|url>] [--dry-run]
   import html [--source=<preset|url>] [--only=<path>] [--dry-run]
-  import local [--dry-run]
+  import local [--only=<path>] [--dry-run]
 
   images scrape [--source=<preset|url>] [--dry-run] [--delay-ms=N] [--folder-id=N]
   images unresolved [--source=<preset|url>] [--analyze]

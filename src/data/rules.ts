@@ -16,144 +16,109 @@ export const RULES: RuleEntry[] = [
   {
     id: 'rule-0',
     number: 0,
-    title: 'You may be removed at any moment, for any length of time, for any reason',
+    title: 'Admins have final say',
     summary: [
-      'You may be removed at any moment, for any length of time, for any reason, should community leadership decide it is for the welfare of the server.',
-      'Leadership is expected to take full responsibility, have good reasoning, and be transparent with the reasoning for any bans used using Rule 0.',
-    ],
-    clarifications: [
-      'If you are found to be using multiple ckeys, an admin may force you to choose one and permanently ban the rest. Using one ckey is necessary for administrative purposes, and using multiple ckeys without notifying an admin will be viewed with extreme suspicion.',
-      'Regularly coming close to breaking the rules will be treated the same as actually breaking them. Repeated bad faith actions on the part of players will not be tolerated, even if they are technically within the bounds of the rules.',
+      'An admin can make any decision on a case that they feel benefits the server, whether that\'s to punish something not in the scope of the rules or to let something go that is.',
+      'Once an ahelp is closed, please do not reopen it in-game for the same issue. You can appeal anything that seemed unfair outside of the round with a ticket in the Discord.',
     ],
   },
   {
     id: 'rule-1',
     number: 1,
-    title: 'In-game administration rulings are final',
+    title: 'Multikeying',
     summary: [
-      'If you feel an administrative decision has been made in error or you disagree with it, in-game is not the place to dispute it. Do as you\'re asked. Raise the issue out-of-game through official channels if you wish to dispute a ruling.',
-    ],
-    clarifications: [
-      'You are permitted to argue your case to an admin during an ahelp conversation, but once it has been closed, do not continue the conversation through any ingame means.',
+      'This server prefers that you stick to one ckey per player. If we find you using multiple, we may have you pick the one you wish to keep using and ban the rest.',
     ],
   },
   {
     id: 'rule-2',
     number: 2,
-    title: 'You must be 18+ to play',
+    title: '18+',
     summary: [
-      'Due to the nature of the game and possible relevance to international law, you must be over the age of 18 to play on the server.',
-    ],
-    clarifications: [
-      'This is mostly a case of "don\'t ask, don\'t tell", but if the administration feels the need to verify your age, you must comply. You may do so anonymously, and are encouraged to do so if the situation arises. It likely won\'t happen unless you do something stupid like brag about being underage, however.',
+      'This server requires you to be over the age of 18 to play.',
+      'If the administration has reason to believe you are breaking this rule, we may ask to verify.',
     ],
   },
   {
     id: 'rule-3',
     number: 3,
-    title: 'Expect bad things to happen',
+    title: 'It\'s Okay To "Lose"',
     summary: [
-      'Your round is not sacred. You may be inconvenienced, killed, or removed from the round for any number of circumstances outside of your control. Accepting this possibility is mandatory.',
-    ],
-    clarifications: [
-      'The Opt-In setting is purely for the mechanical goal of an antagonist having you as a target. This does not make you immune from being targetted for other means, or from the events of the round in general.',
-      'You may have your character\'s appearance and function altered without your consent. This includes but is not limited to mutilation, transformation, borging, "melonbowling", and so on.',
-      'You may be subject to "mind control", hypnosis, and forceful conversion. You are expected to play along to this to the best of your ability. If you are forced into a shell that requires you follow laws — such as a silicon unit — you are expected to follow them to the best of your ability.',
+      'This is, despite its roleplay element, a game. There are times when your character will be interrupted, harmed, killed, modified, or removed from the round. Reversing these circumstances via admin intervention would be an extremely rare exception, and should not be expected.',
     ],
   },
   {
     id: 'rule-4',
     number: 4,
-    title: 'No metagaming',
+    title: 'Metagaming',
     summary: [
-      'Metagaming is defined as using out of character knowledge to act in character. This includes but is not limited to: Metacomms, ghost knowledge, and knowledge of previous rounds.',
-    ],
-    clarifications: [
-      'This rule also includes "IC in OOC" and "OOC in IC". Do not discuss anything that could be pertinent to the ongoing round in OOC, as this can become a form of metagaming, and can spoil the round for others. Even if it\'s something you think everyone would be aware of, don\'t do it.',
-      'You are allowed to have full knowledge of game mechanics and potential round types, and can use this knowledge to influence your in-character actions.',
-      'Metacommunications (metacomms) is defined as communication of active participants in a round through outside means. Including, but not limited to voice chat, text, or in person. All communication between players participating in a round must be done within the game itself. Exceptions may be made for older players teaching newer players, but this must be discussed with administration beforehand.',
+      'You do not need to pretend not to know game mechanics in order to stay in character. Your character can be assumed to know what the antags are, what other jobs are, what each round type is, etc.',
+      'However, any knowledge about events in-round that was not gained in-character (aka talking with other players out of game, witnessing an event while dead) cannot be acted on or shared.',
+      'Additionally, knowledge of events from previous rounds also cannot be acted on. While anecdotes that multiple characters are privy to might help roleplay, don\'t act like you owe another player a gift or an ass-whooping.',
     ],
   },
   {
     id: 'rule-5',
     number: 5,
-    title: 'No griefing',
+    title: 'Self-antagging, Griefing',
     summary: [
-      'Griefing is defined as the deliberate antagonizing of players in or out of character for no valid reason.',
-    ],
-    clarifications: [
-      'This can also be seen as "don\'t be a dick" and "don\'t greytide for no reason". If you have to ask if what you\'re doing is considered griefy, err on the side of caution and don\'t do it, or ahelp beforehand.',
-      'Spam (either IC or OOC) also fall under this rule. Repeatedly cluttering the screen with your messages will result in your ability to send messages be removed, at bare minimum.',
-      'Although antagonists have very relaxed rules regarding what is considered griefing, there are still limits. Anything involving the Interlink, or the arrivals shuttle and its immediate surroundings is considered off-limits to antagonists and crewmembers alike.',
-      'There is limited room for non-antagonists to cause trouble. Small crimes will be overlooked by admins. Having an antagonistic or troublesome personality is fine. Any natural conflict that evolves as a result of these factors is allowed and encouraged.',
+      'Self-antagging: Do not sabotage the station, kill the crew, or bait other players into giving you justification for such acts while not mechanically an antagonist.',
+      'Griefing: In short, don\'t be a dick. Antagonizing other players for no good reason or generally making the game too annoying is frowned upon.',
+      'Antags get a pass if it helps their objectives, but Arrivals and the Interlink are off-limits.',
+      'This doesn\'t stop you from roleplaying an abrasive character or getting in social fights.',
     ],
   },
   {
     id: 'rule-6',
     number: 6,
-    title: 'Do your job',
+    title: 'Stay In Character',
     summary: [
-      'Minimum effort is required of all players to do the job they were assigned at round start. This goes especially true for Silicons, Heads of Staff, and Security.',
-    ],
-    clarifications: [
-      'If you join the round as a Head of Staff or AI, you are expected to remain in the round for at least half an hour from when you joined the round.',
-      'If you need to leave the round early for whatever reason as a round-critical role, notify admins via ahelp, secure job-critical items into your locker, and enter cryosleep.',
-      'As people are expected to do their job, you are also expected to let people do so. If someone is manning a department, you must make a reasonable effort to solicit them for the service you require of them. If they are absent or unwilling to provide a necessary service or item, you are permitted to attempt to do it yourself, at the risk of IC consequences.',
-      'This also means that validhunting is not permitted for anyone outside of Security without valid justification. An alert level at or over Red is sufficient justification on its own, other situations will require context.',
+      'Your character is a unique existence separate from yourself who exists in a different reality. Act within this framework.',
+      'Names should either be reasonable for a real, median human, or follow naming conventions provided to a race. Clowns/Mimes/Silicons can be sillier, but nobody should reference pre-existing characters or people.',
+      'Don\'t reference OOC terms in IC ("round/antag/greentext", leetspeak, etc)',
+      'Ghosts can relax this rule for as long as they\'re ghosts, and talk about the current round\'s events with anyone. They cannot take information gained while they were ghosts back into the round when they enter it again.',
+      'Once the round ends, IC/OOC rules are free to be ignored.',
+      'As in Rule 3, your character\'s personality or motivations are liable to be modified by outside forces without your consent, such as forceborging or "mind control" from various antag types. So long as such applied directives are in-character from the perpetrator\'s standpoint, do your best to follow them. For forceborging in particular, you are subject to SILICON RULES listed at the bottom.',
     ],
   },
   {
     id: 'rule-7',
     number: 7,
-    title: 'No powergaming',
+    title: 'Do Your Job',
     summary: [
-      'Powergaming is defined as obtaining unnecessary power unrelated to your job. Key word here being unnecessary.',
-    ],
-    clarifications: [
-      'The rule of thumb to follow here is: If an admin asks you "why do you have [x]?" you need to have a valid reason or purpose for it. "Just in case" will not be treated as a valid reason.',
-      'A necessary situation to be aquiring power is if there is a credible and direct threat to your life. Being on blue alert is not enough. Being on red alert is. Having a known crisis on the station is. Having someone threaten your life directly can be treated as such.',
-      'If items or other abilities (augments, viruses, mutations) are normally and realistically obtainable within your job, it is not powergaming to obtain them. Likewise, it is not powergaming to ask for and be willingly given items and/or abilities from someone working said department. It will be treated as powergaming if you attain them illicitly without an attempt to do so properly.',
+      'The game part of this game demands that you spare at least a small amount of time towards actually doing the job assigned to you.',
+      'Station-critical roles such as command and AI are expected to ahelp and secure sensitive items if they intend to leave before one hour of station time.',
+      'If a department is staffed, expect them to be doing their job too. Solicit their help before considering breaking in for a service their role would render, and assume there will be IC consequences if you try to handle it yourself anyway.',
+      'The impulse to do what you\'ve signed on to a stellar voyage for can be considered a core part of your character. There are even job codes for people outright being lazy and shirking as a habit (unassigned Assistant, \'tourist\', etc). Taking up a slot with specific access without performing its functions is looked at unfavorably RP-wise (rule 6)',
     ],
   },
   {
     id: 'rule-8',
     number: 8,
-    title: 'No self-antagging',
+    title: 'Powergaming',
     summary: [
-      'Self-antagging is defined as acting purely antagonistic to the crew for no discernable reason as a non-antag.',
-    ],
-    clarifications: [
-      'This includes attempting to bait someone into a conflict with the intent of gaining a valid reason to kill them.',
-      'Silicons with no laws preventing murder are still expected to act in good faith. Being purged is not an excuse to start plasmaflooding the station.',
+      'Don\'t go out of your way to obtain unnecessary extra power outside of your job without an IC reason. Anything within your job that you have valid access to is fair game, and other departments can always willingly give you things, but obtaining them illicitly is what would break this rule.',
+      'Blue alert alone is not an IC reason for getting more power, but knowing there is a credible threat or previous attempt on your life specifically is. Red alert, or a station crisis that would justify it, is similarly a valid reason.',
     ],
   },
   {
     id: 'rule-9',
     number: 9,
-    title: 'As an antagonist, fulfil your objectives',
+    title: 'Do Your Objectives',
     summary: [
-      'You are expected to play towards your objectives as a solo antagonist. You are expected to also not harm or endanger your team as a team antagonist. Failing your objectives is okay, but actively making it more difficult for yourself to complete your objectives is not.',
-    ],
-    clarifications: [
-      'Murderboning is seen as intentionally working against your objectives as a solo antagonist, as it heavily reduces your chances at success. That, and it\'s just a dick move. Don\'t do it. Don\'t out yourself intentionally to force yourself to do it either.',
-      'Acts of mass destruction are permitted as an antagonist so long as they don\'t make it more difficult for you to achieve your goals. For example, creating a loose singularity when you still have a steal objective to fulfil would be seen as acting against your goals, as the item could be destroyed by the singularity.',
+      'Solo antagonists are expected to play towards their objectives. Team antagonists are expected not to harm their team, additionally. While it\'s still Okay To Lose, you should not intentionally make it impossible for yourself to "win."',
+      'Murderboning (acts of mass murder with no or forced/very poor escalation) goes against a solo antagonist\'s objectives.',
+      'On the other hand, extreme acts of sabotage to the station, even if they kill or round remove a lot of people, are allowed as long as they don\'t logically work against your objectives.',
+      'If it\'s roundstart and you absolutely don\'t want to antag (or something just came up), ahelp before you spend your antag role\'s resources. If you have to leave before you\'ve done anything illicit but you have bought things, gather up any role item you can carry and ahelp before you cryosleep. This isn\'t a "station critical" role, but since conflict is what drives stories, missing our source of conflict is something we\'d also like to avoid.',
     ],
   },
-  {
-    id: 'rule-10',
-    number: 10,
-    title: 'Stay in character',
-    summary: [
-      'Your character is (usually) a living, breathing character within a setting different from our own. You\'re expected to act within these bounds at all times.',
-    ],
-    clarifications: [
-      'Naming your character falls under this rule. "Firstname Lastname" is acceptable convention for all races, although some races may have alternate acceptable formats. Naming your character in excessively OOC terminology or referencing preexisting characters or people is not permitted. Mimes, clowns, and silicons have a more relaxed naming policy, but you will still be warned if you overstep the bounds of what is considered acceptable.',
-      'Do not use OOC terms in IC. Avoid using terms like "round" and netspeak like "lol uwu :)" in general.',
-      'As a silicon, you are expected to follow your laws to the letter, from top to bottom. Higher laws have higher priority and overrule any lower laws if they conflict with the higher one. If a law is ambiguous, choose a single interpretation and stick to it for the entire round.',
-      'Once you\'re a ghost, you\'re allowed to break character and use OOC terminology however you wish, as well as discuss the current round. (re: rule 4) This freedom only exists while you are a ghost, and ends immediately upon you re-entering the round by any means.',
-      'You are permitted to freely break character and act however you wish only once the round end report appears. This includes grief, murder, and mass destruction.',
-    ],
-  },
+];
+
+export const SILICON_RULES: string[] = [
+  'A silicon\'s lawset is an existential contract and must be followed to the letter. Laws higher up on the list have a higher authority and override lower laws if a conflict arises. If your laws are too ambiguous, interpret them in one way and stay consistent with that. (Rule 6)',
+  'Furthermore, your laws can possibly be changed in any way a player with the right amount of access to your upload deems fit, at any point in the round. You have to deal with these changes as they happen in-character. The only exception to this is if someone\'s breaking Rule 5 to make you round-remove yourself or otherwise be absolutely useless. (Rule 3)',
+  'An absence of laws restricting murder is not an excuse to murderbone. If your laws do not COMPEL you to harm other beings, act like a normal crewman would (Rule 5)',
+  'If you are compelled by laws to act in a way that can only break Rule 5 or can only help another player break Rule 8 and you follow them consistently, the player who set your laws to that state is fully responsible. (We might ask you to walk us through your interpretation.)',
 ];
 
 export const STAFF_ROLES: StaffRole[] = [
